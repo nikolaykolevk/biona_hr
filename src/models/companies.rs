@@ -1,6 +1,7 @@
 use biona_core::biona_macros::TableTrait;
+use serde::{Deserialize, Serialize};
 
-#[derive(TableTrait, Default, Debug)]
+#[derive(TableTrait, Default, Debug, Serialize, Deserialize)]
 #[table_name(companies)]
 #[tables_join(companies::table.inner_join(sys_company_type::table))]
 pub struct Companies {

@@ -1,7 +1,8 @@
 use biona_core::biona_macros::TableTrait;
 use biona_core::models::NaiveDate;
+use serde::{Deserialize, Serialize};
 
-#[derive(TableTrait, Default, Debug)]
+#[derive(TableTrait, Default, Debug, Deserialize, Serialize)]
 #[table_name(tmp)]
 pub struct Tmp {
 
